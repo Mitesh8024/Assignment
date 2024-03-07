@@ -1,0 +1,294 @@
+mitesh_kambli@DESKTOP-O0GLJN7:~$ ls
+LinuxAssingment  cdac  family  familytree  snap  tree  user1  user2
+mitesh_kambli@DESKTOP-O0GLJN7:~$ cd LinuxAssingment
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ touch file1
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ ls
+file1
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ touch file1.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ ls
+file1  file1.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ mkdir docs
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ ls
+docs  file1  file1.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ cd docs
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs$ mv file1.txt file2.txt
+mv: cannot stat 'file1.txt': No such file or directory
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs$ touch file1.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs$ ls
+file1.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs$ cd..
+cd..: command not found
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs$ cd ..
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ ls
+docs  file1  file1.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ mv file1.txt file2.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ ls
+docs  file1  file2.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ cd docs
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs$ rm file1
+rm: cannot remove 'file1': No such file or directory
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs$ man rm
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs$ rm 'file1'
+rm: cannot remove 'file1': No such file or directory
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs$
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs$ ls
+file1.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs$ mv file1.txt file2.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs$ ls
+file2.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs$ ls -l
+total 0
+-rw-r--r-- 1 mitesh_kambli mitesh_kambli 0 Mar  7 18:55 file2.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs$ ls -l -a
+total 8
+drwxr-xr-x 2 mitesh_kambli mitesh_kambli 4096 Mar  7 19:08 .
+drwxr-xr-x 3 mitesh_kambli mitesh_kambli 4096 Mar  7 18:57 ..
+-rw-r--r-- 1 mitesh_kambli mitesh_kambli    0 Mar  7 18:55 file2.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs$ chmod man
+chmod: missing operand after ‘man’
+Try 'chmod --help' for more information.
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs$ man chmod
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs$
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs$ chmod 744 file2.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs$ ls
+file2.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs$ ls -l
+total 0
+-rwxr--r-- 1 mitesh_kambli mitesh_kambli 0 Mar  7 18:55 file2.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs$ ls
+file2.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs$ ls -l -a
+total 8
+drwxr-xr-x 2 mitesh_kambli mitesh_kambli 4096 Mar  7 19:08 .
+drwxr-xr-x 3 mitesh_kambli mitesh_kambli 4096 Mar  7 18:57 ..
+-rwxr--r-- 1 mitesh_kambli mitesh_kambli    0 Mar  7 18:55 file2.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs$ cd ..
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ ls -l -a
+total 12
+drwxr-xr-x  3 mitesh_kambli mitesh_kambli 4096 Mar  7 18:57 .
+drwxr-x--- 11 mitesh_kambli mitesh_kambli 4096 Mar  7 19:13 ..
+drwxr-xr-x  2 mitesh_kambli mitesh_kambli 4096 Mar  7 19:08 docs
+-rw-r--r--  1 mitesh_kambli mitesh_kambli    0 Mar  7 18:49 file1
+-rw-r--r--  1 mitesh_kambli mitesh_kambli    0 Mar  7 18:50 file2.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ cd ..
+mitesh_kambli@DESKTOP-O0GLJN7:~$ ls -l -a
+total 68
+drwxr-x--- 11 mitesh_kambli mitesh_kambli 4096 Mar  7 19:13 .
+drwxr-xr-x  3 root          root          4096 Mar  5 20:06 ..
+-rw-------  1 mitesh_kambli mitesh_kambli  140 Mar  6 10:33 .bash_history
+-rw-r--r--  1 mitesh_kambli mitesh_kambli  220 Mar  5 20:06 .bash_logout
+-rw-r--r--  1 mitesh_kambli mitesh_kambli 3771 Mar  5 20:06 .bashrc
+drwx------  2 mitesh_kambli mitesh_kambli 4096 Mar  5 20:07 .cache
+-rw-------  1 mitesh_kambli mitesh_kambli   20 Mar  7 19:13 .lesshst
+-rw-r--r--  1 mitesh_kambli mitesh_kambli    0 Mar  6 10:31 .motd_shown
+-rw-r--r--  1 mitesh_kambli mitesh_kambli  807 Mar  5 20:06 .profile
+-rw-r--r--  1 mitesh_kambli mitesh_kambli    0 Mar  5 20:08 .sudo_as_admin_successful
+-rw-------  1 mitesh_kambli mitesh_kambli 1005 Mar  6 20:02 .viminfo
+drwxr-xr-x  3 mitesh_kambli mitesh_kambli 4096 Mar  7 18:57 LinuxAssingment
+drwxr-xr-x  2 mitesh_kambli mitesh_kambli 4096 Mar  6 19:24 cdac
+drwxr-xr-x  2 mitesh_kambli mitesh_kambli 4096 Mar  6 19:40 family
+drwxr-xr-x  3 mitesh_kambli mitesh_kambli 4096 Mar  6 19:43 familytree
+drwx------  3 mitesh_kambli mitesh_kambli 4096 Mar  6 19:34 snap
+drwxr-xr-x  2 mitesh_kambli mitesh_kambli 4096 Mar  6 19:40 tree
+drwxr-xr-x  4 mitesh_kambli mitesh_kambli 4096 Mar  6 19:28 user1
+drwxr-xr-x  4 mitesh_kambli mitesh_kambli 4096 Mar  6 19:32 user2
+mitesh_kambli@DESKTOP-O0GLJN7:~$ cd LinuxAssingment
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ cd doc
+-bash: cd: doc: No such file or directory
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ cd docs
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs$cd ..
+
+mitesh_kambli@DESKTOP-O0GLJN7:~$ ls
+LinuxAssingment  cdac  family  familytree  snap  tree  user1  user2
+mitesh_kambli@DESKTOP-O0GLJN7:~$ cd LinuxAssingment
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ ls
+data.txt  docs  file1  file1.txt  file2.txt  num.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ ls -la
+total 24
+drwxr-xr-x  3 mitesh_kambli mitesh_kambli 4096 Mar  7 22:36 .
+drwxr-x--- 11 mitesh_kambli mitesh_kambli 4096 Mar  7 19:13 ..
+-rw-r--r--  1 mitesh_kambli mitesh_kambli  131 Mar  7 20:05 data.txt
+drwxr-xr-x  2 mitesh_kambli mitesh_kambli 4096 Mar  7 19:08 docs
+-rw-r--r--  1 mitesh_kambli mitesh_kambli    0 Mar  7 18:49 file1
+-rw-r--r--  1 mitesh_kambli mitesh_kambli   36 Mar  7 22:37 file1.txt
+-rw-r--r--  1 mitesh_kambli mitesh_kambli    0 Mar  7 18:50 file2.txt
+-rw-r--r--  1 mitesh_kambli mitesh_kambli   41 Mar  7 20:09 num.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ cat file1
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ ls
+data.txt  docs  file1  file1.txt  file2.txt  num.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ cat file1.txt
+Pune
+Mumbai
+Kharghar
+Kudal
+MIDC 123
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ cd
+mitesh_kambli@DESKTOP-O0GLJN7:~$ cd
+mitesh_kambli@DESKTOP-O0GLJN7:~$ cd ..
+mitesh_kambli@DESKTOP-O0GLJN7:/home$ find -name "*.txt"
+./mitesh_kambli/LinuxAssingment/docs/file2.txt
+./mitesh_kambli/LinuxAssingment/num.txt
+./mitesh_kambli/LinuxAssingment/data.txt
+./mitesh_kambli/LinuxAssingment/file1.txt
+./mitesh_kambli/LinuxAssingment/file2.txt
+./mitesh_kambli/familytree/grandparents/Dad/Me/Me1/Me1.txt
+./mitesh_kambli/familytree/grandparents/Dad/Me/Mitesh.txt
+mitesh_kambli@DESKTOP-O0GLJN7:/home$ cd mitesh_kambli
+mitesh_kambli@DESKTOP-O0GLJN7:~$ cs LinuxAssingment
+Command 'cs' not found, but can be installed with:
+sudo apt install csound
+mitesh_kambli@DESKTOP-O0GLJN7:~$ cd LinuxAssingment
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ cal
+     March 2024
+Su Mo Tu We Th Fr Sa
+                1  2
+ 3  4  5  6  7  8  9
+10 11 12 13 14 15 16
+17 18 19 20 21 22 23
+24 25 26 27 28 29 30
+31
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ ls
+data.txt  docs  file1  file1.txt  file2.txt  num.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ cat file1.txt
+Pune
+Mumbai
+Kharghar
+Kudal
+MIDC 123
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1492
+        inet 172.27.124.48  netmask 255.255.240.0  broadcast 172.27.127.255
+        inet6 fe80::215:5dff:fe84:3004  prefixlen 64  scopeid 0x20<link>
+        ether 00:15:5d:84:30:04  txqueuelen 1000  (Ethernet)
+        RX packets 589  bytes 573183 (573.1 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 320  bytes 60145 (60.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ ping google.com
+PING google.com (142.250.183.14) 56(84) bytes of data.
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=1 ttl=59 time=15.7 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=2 ttl=59 time=16.3 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=3 ttl=59 time=14.5 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=4 ttl=59 time=15.8 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=5 ttl=59 time=15.7 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=6 ttl=59 time=15.9 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=7 ttl=59 time=15.7 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=8 ttl=59 time=16.2 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=9 ttl=59 time=15.6 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=10 ttl=59 time=15.7 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=11 ttl=59 time=17.5 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=12 ttl=59 time=15.7 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=13 ttl=59 time=17.0 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=14 ttl=59 time=14.2 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=15 ttl=59 time=20.5 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=16 ttl=59 time=16.1 ms
+d64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=17 ttl=59 time=17.6 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=18 ttl=59 time=16.0 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=19 ttl=59 time=16.4 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=20 ttl=59 time=36.6 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=21 ttl=59 time=15.8 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=22 ttl=59 time=15.5 ms
+ddd64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=23 ttl=59 time=16.6 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=24 ttl=59 time=15.7 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=25 ttl=59 time=16.0 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=26 ttl=59 time=16.2 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=27 ttl=59 time=15.5 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=28 ttl=59 time=14.5 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=29 ttl=59 time=14.9 ms
+^[^[64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=30 ttl=59 time=15.7 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=31 ttl=59 time=16.2 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=32 ttl=59 time=14.0 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=33 ttl=59 time=16.3 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=34 ttl=59 time=16.4 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=35 ttl=59 time=17.4 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=36 ttl=59 time=16.3 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=37 ttl=59 time=15.7 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=38 ttl=59 time=20.4 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=39 ttl=59 time=15.5 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=40 ttl=59 time=15.7 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=41 ttl=59 time=15.7 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=42 ttl=59 time=14.1 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=43 ttl=59 time=16.2 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=44 ttl=59 time=15.6 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=45 ttl=59 time=14.8 ms
+64 bytes from bom07s30-in-f14.1e100.net (142.250.183.14): icmp_seq=46 ttl=59 time=18.8 ms
+^C
+--- google.com ping statistics ---
+46 packets transmitted, 46 received, 0% packet loss, time 45077ms
+rtt min/avg/max/mdev = 14.024/16.530/36.631/3.259 ms
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ zip
+Command 'zip' not found, but can be installed with:
+sudo apt install zip
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ sudo apt install zip -y
+[sudo] password for mitesh_kambli:
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  unzip
+The following NEW packages will be installed:
+  unzip zip
+0 upgraded, 2 newly installed, 0 to remove and 30 not upgraded.
+Need to get 350 kB of archives.
+After this operation, 930 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 unzip amd64 6.0-26ubuntu3.2 [175 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 zip amd64 3.0-12build2 [176 kB]
+Fetched 350 kB in 2s (187 kB/s)
+Selecting previously unselected package unzip.
+(Reading database ... 24266 files and directories currently installed.)
+Preparing to unpack .../unzip_6.0-26ubuntu3.2_amd64.deb ...
+Unpacking unzip (6.0-26ubuntu3.2) ...
+Selecting previously unselected package zip.
+Preparing to unpack .../zip_3.0-12build2_amd64.deb ...
+Unpacking zip (3.0-12build2) ...
+Setting up unzip (6.0-26ubuntu3.2) ...
+Setting up zip (3.0-12build2) ...
+Processing triggers for man-db (2.10.2-1) ...
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ zip -r zipdoc1.zip docs
+  adding: docs/ (stored 0%)
+  adding: docs/file2.txt (stored 0%)
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ ls
+data.txt  docs  file1  file1.txt  file2.txt  num.txt  zipdoc1.zip
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ unzip zipdoc1 -d docs2
+Archive:  zipdoc1.zip
+   creating: docs2/docs/
+ extracting: docs2/docs/file2.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ ls
+data.txt  docs  docs2  file1  file1.txt  file2.txt  num.txt  zipdoc1.zip
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ cd docs2
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs2$ ls
+docs
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs2$ cd docs
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs2/docs$ ls
+file2.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs2/docs$ cd ..
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs2$ cd ..
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ vi file1.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ cat file1.txt
+PUNE
+Mitesh
+Pune
+Mumbai
+Kharghar
+Kudal
+MIDC 123
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ sed -i 's/PUNE/NEW/g' file1.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ cat file1.txt
+NEW
+Mitesh
+Pune
+Mumbai
+Kharghar
+Kudal
+MIDC 123
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$
