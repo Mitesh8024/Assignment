@@ -1,0 +1,245 @@
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/docs$ cd ..
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ touch data.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ ls
+data.txt  docs  file1  file2.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ cat > data.txt
+Mitesh
+Tony
+Arya
+Prathmesh
+Servesh
+Amit
+Govinda
+Ketan
+Raju
+Shubham
+Nitesh
+Adesh
+ccccc
+ddddd
+q
+
+kkkkk
+lllll
+head
+chetan
+vishal
+ashu
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ head -10 data.txt
+Mitesh
+Tony
+Arya
+Prathmesh
+Servesh
+Amit
+Govinda
+Ketan
+Raju
+Shubham
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ tail -n 5 data.txt
+lllll
+head
+chetan
+vishal
+ashu
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ touch num.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ cat > num.txt
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+2
+13
+14
+15
+16
+17
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ head -n 15 num.txt
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+2
+13
+14
+15
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ tail -3 num.txt
+15
+16
+17
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$
+
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ cd ..
+mitesh_kambli@DESKTOP-O0GLJN7:~$ ls
+LinuxAssingment  cdac  family  familytree  snap  tree  user1  user2
+mitesh_kambli@DESKTOP-O0GLJN7:~$ cd LinuxAssingment
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ ls
+data.txt  docs  docs2  file1  file1.txt  file2.txt  num.txt  zipdoc1.zip
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ cat data.txt
+Mitesh
+Tony
+Arya
+Prathmesh
+Servesh
+Amit
+Govinda
+Ketan
+Raju
+Shubham
+Nitesh
+Adesh
+ccccc
+ddddd
+q
+
+kkkkk
+lllll
+head
+chetan
+vishal
+ashu
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ head -10 data.txt
+Mitesh
+Tony
+Arya
+Prathmesh
+Servesh
+Amit
+Govinda
+Ketan
+Raju
+Shubham
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ tail -5 data.txt
+lllll
+head
+chetan
+vishal
+ashu
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ cp data.txt number.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ head -15 number.txt
+Mitesh
+Tony
+Arya
+Prathmesh
+Servesh
+Amit
+Govinda
+Ketan
+Raju
+Shubham
+Nitesh
+Adesh
+ccccc
+ddddd
+q
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ tail -3 number.txt
+chetan
+vishal
+ashu
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ vi input.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ cat input.txt | tr [a-z] [A-Z]
+MY CDAC JOURNEY IS BEST
+MY NAME IS MITESH
+MY FAMILY LIVES IN KUDAL
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ vi duplicate.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ cat duplicate.txt
+mumbai is best
+mumbai is best
+konkan is beautiful
+konkan is beautiful
+goa is fabulous
+pune is great
+kharghar
+kharghar
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ uniq duplicate.txt
+mumbai is best
+konkan is beautiful
+goa is fabulous
+pune is great
+kharghar
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ uniq -u duplicate.txt
+goa is fabulous
+pune is great
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ cat duplicate.txt
+mumbai is best
+mumbai is best
+konkan is beautiful
+konkan is beautiful
+goa is fabulous
+pune is great
+kharghar
+kharghar
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ uniq -c duplicate.txt
+      2 mumbai is best
+      2 konkan is beautiful
+      1 goa is fabulous
+      1 pune is great
+      2 kharghar
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ uniq d duplicate.txt
+uniq: d: No such file or directory
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ uniq -d duplicate.txt
+mumbai is best
+konkan is beautiful
+kharghar
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ uniq -u duplicate.txt
+goa is fabulous
+pune is great
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ uniq u duplicate.txt
+uniq: u: No such file or directory
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ uniq -u duplicate.txt
+goa is fabulous
+pune is great
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ sort duplicate | uniq -c
+sort: cannot read: duplicate: No such file or directory
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ sort duplicate.txt | uniq -c
+      1 goa is fabulous
+      2 kharghar
+      2 konkan is beautiful
+      2 mumbai is best
+      1 pune is great
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ vi fruit.txt
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ cat fruit.txt
+orange
+Orange
+grape
+Grape
+apple
+apple
+Mango
+water melon
+jackfruit
+
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ sort fruit.txt | uniq -c
+      1
+      1 Grape
+      1 Mango
+      1 Orange
+      2 apple
+      1 grape
+      1 jackfruit
+      1 orange
+      1 water melon
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ sort fruit.txt | uniq -u
+
+Grape
+Mango
+Orange
+grape
+jackfruit
+orange
+water melon
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$
