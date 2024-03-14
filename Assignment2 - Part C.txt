@@ -1,0 +1,236 @@
+1. Write a shell script that prints "Hello, World!" to the terminal.
+-->
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ cd Assignment2
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ vi q1.sh
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ chmod +x qi.sh
+chmod: cannot access 'qi.sh': No such file or directory
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ chmod +x q1.sh
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ ./q1.sh
+Hello, World!
+Welcome to CDAC Mumbai-PG DAC Course.
+
+Question 2: Declare a variable named "name" and assign the value "CDAC Mumbai" to it. Print the
+value of the variable.
+-->
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ vi q2.sh
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ chmod +x q2.sh
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ ./q2.sh
+Enter your Institute Name:
+CDAC Mumbai
+Institute Name: CDAC Mumbai
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ cat q2.sh
+#!/bin/bash
+echo "Enter your Institute Name:"
+read Name
+echo "Institute Name: $Name"
+
+
+Question 3: Write a shell script that takes a number as input from the user and prints it
+-->
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ vi q3.sh
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ chmod +x q3.sh
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ ./q3.sh
+Input Any Number
+10
+Number: 10
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ cat q3.sh
+#!/bin/bash
+echo "Input Any Number"
+read num
+echo "Number: $num"
+
+Question 4: Write a shell script that performs addition of two numbers (e.g., 5 and 3) and prints the
+result.
+-->
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ vi q4.sh
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ chmod +x q4.sh
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ ./q4.sh
+Enter First Number
+3
+Enter Second Number
+5
+Result: 8
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ cat q4.sh
+#!/bin/bash
+echo "Enter First Number"
+read x
+echo "Enter Second Number"
+read y
+((sum=$x+$y))
+echo "Result: $sum"
+
+Question 5: Write a shell script that takes a number as input and prints "Even" if it is even, otherwise
+prints "Odd".
+-->
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ ./q5.sh
+Enter Number
+5
+Odd Number
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ ./q5.sh
+Enter Number
+10
+Even Number
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ cat q5.sh
+#!/bin/bash
+echo "Enter Number"
+read num
+
+if [[ ($num%2 -eq 0 ) ]];
+then
+        echo "Even Number"
+else
+        echo "Odd Number"
+fi
+
+Question 6: Write a shell script that uses a for loop to print numbers from 1 to 5
+-->
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ vi q6.sh
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ chmod +x q6.sh
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ ./q6.sh
+
+1
+2
+3
+4
+5
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ cat q6.sh
+#!/bin/bash
+
+read i
+for (( i=1; i<=5; i++ ))
+do
+        echo $i;
+done
+
+Question 7: Write a shell script that uses a while loop to print numbers from 1 to 5
+-->
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ ./q7.sh
+1
+2
+3
+4
+5
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ cat q7.sh
+#!/bin/bash
+a=1
+while [ $a -lt 6 ]
+do
+        echo $a;
+        a=`expr $a + 1`
+done
+
+Question 8: Write a shell script that checks if a file named "file.txt" exists in the current directory. If it
+does, print "File exists", otherwise, print "File does not exist"
+-->
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ ./q8.sh
+./file.txt
+
+
+File Exist
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ cat q8.sh
+#!/bin/bash
+f= find -name "file.txt"
+read f
+echo $f
+if [[ ($f == $f ) ]];
+then
+        echo "File Exist"
+else
+        echo "File Does Not Exist"
+fi
+
+Not Sure
+
+Question 9: Write a shell script that uses the if statement to check if a number is greater than 10 and
+prints a message accordingly.
+-->
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ vi q9.sh
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ chmod +x q9.sh
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ ./q9.sh
+Enter any digit Number to compare with 10
+13
+Entered Number: 13
+Entered number is greater than 10
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ ./q9.sh
+Enter any digit Number to compare with 10
+9
+Entered Number: 9
+Entered number is less than 10
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ ./q9.sh
+Enter any digit Number to compare with 10
+10
+Entered Number: 10
+Entered number is equal to 10
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ cat q9.sh
+#!/bin/bash
+echo "Enter any digit Number to compare with 10"
+read num
+echo "Entered Number: $num"
+if [[ $num -eq 10 ]]
+then
+        echo "Entered number is equal to 10"
+elif [[ $num -gt 10 ]]
+then
+        echo "Entered number is greater than 10"
+else
+        echo "Entered number is less than 10"
+fi
+
+
+Question 10: Write a shell script that uses nested for loops to print a multiplication table for numbers
+from 1 to 5. The output should be formatted nicely, with each row representing a number and each
+column representing the multiplication result for that number.
+-->
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ ./q10.sh
+
+ 1    2    3    4    5
+ 2    4    6    8    10
+ 3    6    9    12   15
+ 4    8    12   16   20
+ 5    10   15   20   25
+ 6    12   18   24   30
+ 7    14   21   28   35
+ 8    16   24   32   40
+ 9    18   27   36   45
+ 10   20   30   40   50
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ cat q10.sh
+#!/bin/bash
+read i
+for (( i=1; i<=10; i++ ));
+do
+        for (( j=1; j<=5; j++ ));
+        do
+                printf "%-5s" " $((i*j))"
+        done
+        printf "\n"
+done
+
+Question 11: Write a shell script that uses a while loop to read numbers from the user until the user enters
+a negative number. For each positive number entered, print its square. Use the break statement to exit the
+loop when a negative number is entered
+-->
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ vi q11.sh
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ ./q11.sh
+Enter Any Number or Enter any Negative number to exit.
+Enter Your Number
+10
+Enter number: 10
+Square of 10 = 100
+Enter Your Number
+-1
+Enter number: -1
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/Assignment2$ cat q11.sh
+#!/bin/bash
+echo "Enter Any Number or Enter any Negative number to exit."
+while :
+do
+        echo "Enter Your Number"
+        read n
+        echo "Enter number: $n"
+        if [ $n -lt 0 ];
+        then
+                break
+        else
+                echo "Square of $n = $((n*n))"
+        fi
+done

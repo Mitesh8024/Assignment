@@ -1,0 +1,158 @@
+1. echo " Hello,World!"
+-->
+Will Display or print string "Hello,World!"
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ echo "Hello, World!"
+Hello, World!
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$
+
+2. name= "Productive"
+-->
+will store string "Productive" in name.
+
+3. touch file.txt 
+-->
+will create file "file.txt".
+
+4. ls -a 
+-->
+will show all files and directory in same directory including hidden files.
+
+5.rm file.txt
+-->
+will remove file.txt
+
+6.mv file.txt /path/to/directory/
+-->
+will move file.txt to given destination.
+
+7.chmod 755 script.sh 
+-->
+-rwxr-xr-x 1 mitesh_kambli mitesh_kambli    0 Mar  8 23:14 script.sh
+will provide permissions to file script.sh owner -Read Write execute , Group - read & execute, Other - read & execute
+
+8. grep "pattern" file.txt 
+-->
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ grep "NEW" file1.txt
+NEW
+will show text present or search or find in file.txt 
+
+9. kill PID 
+-->
+will stop the process execution or kill the process
+
+10.mkdir mydir && cd mydir && touch file.txt && echo "Hello, World!" > file.txt && cat file.txt
+-->
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ mkdir mydir && cd mydir && touch file.txt && echo "Hello,World">file.txt && cat file.txt
+Hello,World
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/mydir$
+
+will create directory mkdir then open directory mkdir then create file.txt in it print "Hello,world" in file.txt
+
+11.ls -l | grep ".txt" 
+-->
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment/mydir$ ls -l | grep ".txt"
+-rw-r--r-- 1 mitesh_kambli mitesh_kambli 12 Mar  8 23:27 file.txt
+
+will show all permissions details and along with it pipeline the files ".txt" files in directory mkdir
+
+12. cat file1.txt file2.txt | sort | uniq 
+-->
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ ls
+data.txt  docs2          file1      file2.txt  input.txt  num.txt     script.sh
+docs      duplicate.txt  file1.txt  fruit.txt  mydir      number.txt  zipdoc1.zip
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ cat file.txt file2.txt | sort | uniq
+cat: file.txt: No such file or directory
+Kharghar
+Kudal
+MIDC 123
+Mitesh
+Mumbai
+NEW
+Pune
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ cat file1.txt file2.txt | sort | uniq
+Kharghar
+Kudal
+MIDC 123
+Mitesh
+Mumbai
+NEW
+Pune
+
+Will show sort text in file1.txt and file2.txt and show uniq text from both the files..
+
+13.ls -l | grep "^d" 
+-->
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ ls -l | grep "**d"
+-rw-r--r-- 1 mitesh_kambli mitesh_kambli  131 Mar  7 20:05 data.txt
+drwxr-xr-x 2 mitesh_kambli mitesh_kambli 4096 Mar  7 19:08 docs
+drwxr-xr-x 3 mitesh_kambli mitesh_kambli 4096 Mar  7 23:19 docs2
+-rw-r--r-- 1 mitesh_kambli mitesh_kambli  118 Mar  8 00:15 duplicate.txt
+drwxr-xr-x 2 mitesh_kambli mitesh_kambli 4096 Mar  8 23:27 mydir
+-rw-r--r-- 1 mitesh_kambli mitesh_kambli  316 Mar  7 23:16 zipdoc1.zip
+
+will show files and directory start with "d" or "d" in it...
+
+14.ls -l | grep "^d" 
+-->
+will display permissions and files in directory will show the pattern of files or directory presenting 
+
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ grep -r docs
+grep: zipdoc1.zip: binary file matches (Not Sure)
+
+15.grep -r "pattern" /path/to/directory/
+-->
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ grep -r "NEW"
+file1.txt:NEW
+file2.txt:NEW
+
+will search file having following pattern here example "NEW" show the file which having it ....
+
+16.cat file1.txt file2.txt | sort | uniq –d 
+-->
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ cat file1.txt file2.txt | sort | uniq -d
+Kharghar
+Kudal
+MIDC 123
+Mitesh
+Mumbai
+NEW
+Pune
+
+will Sort and display uniq and duplicate data from both the files
+
+
+17.chmod 644 file.txt 
+-->
+-rw-r--r-- 1 mitesh_kambli mitesh_kambli    0 Mar  9 00:03 file.txt
+after cmd chmod 644 file.txt
+-rw-r--r-- 1 mitesh_kambli mitesh_kambli    0 Mar  9 00:03 file.txt
+User -- read and write , group -- read, other -- read
+
+18.cp -r source_directory destination_directory 
+-->
+will copy from one directory to other destination directory.
+
+19.find /path/to/search -name "*.txt"
+-->
+will show the .txt file in it...
+
+20.chmod u+x file.txt 
+-->
+-rwxr--r-- 1 mitesh_kambli mitesh_kambli    0 Mar  9 00:03 file.txt
+
+User will be provided permission for execute..
+
+21.echo $PATH 
+-->
+mitesh_kambli@DESKTOP-O0GLJN7:~/LinuxAssingment$ echo $ PATH
+$ PATH
+
+Show full System path...
+
+
+
+
+
+
+
+
